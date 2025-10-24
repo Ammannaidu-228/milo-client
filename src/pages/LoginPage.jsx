@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { MessageCircle, Lock, Mail, Loader, Eye, EyeOff, Shield, Heart, Zap, Sparkles } from "lucide-react";
 import { useAuthStore } from "../store/useAuthStore";
+import { Link } from "react-router-dom";
 
 function LoginPage() {
   const [formData, setFormData] = useState({ email: "", password: "" });
@@ -229,9 +230,9 @@ function LoginPage() {
               <div className="mt-6 sm:mt-7 text-center">
                 <p className="text-xs sm:text-sm text-gray-600 font-light tracking-wide" style={{fontFamily: 'Georgia, serif'}}>
                   Don't have an account?{" "}
-                  <a href="/signup" className="text-amber-600 hover:text-amber-700 font-normal transition-colors">
+                  <Link to="/signup" className="text-amber-600 hover:text-amber-700 font-normal transition-colors">
                     Create Account
-                  </a>
+                  </Link>
                 </p>
               </div>
 

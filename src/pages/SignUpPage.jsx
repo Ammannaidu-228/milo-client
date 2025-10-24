@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { MessageCircle, Lock, Mail, User, Loader, Eye, EyeOff, Shield, CheckCircle, Sparkles, Heart, Zap } from "lucide-react";
 import { useAuthStore } from "../store/useAuthStore";
+import { Link } from "react-router-dom";
 
 function SignUpPage() {
   const [formData, setFormData] = useState({ fullName: "", email: "", password: "" });
@@ -149,9 +150,9 @@ function SignUpPage() {
               <div className="mt-6 sm:mt-7 text-center">
                 <p className="text-xs sm:text-sm text-gray-600 font-light tracking-wide" style={{fontFamily: 'Georgia, serif'}}>
                   Already have an account?{" "}
-                  <a href="/login" className="text-amber-600 hover:text-amber-700 font-normal transition-colors">
+                  <Link to="/login" className="text-amber-600 hover:text-amber-700 font-normal transition-colors">
                     Sign In
-                  </a>
+                  </Link>
                 </p>
               </div>
 
