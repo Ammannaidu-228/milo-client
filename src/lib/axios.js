@@ -8,7 +8,7 @@ const API_BASE = import.meta.env.VITE_API_URL
   ? import.meta.env.VITE_API_URL.replace(/\/$/, "")
   : import.meta.env.MODE === "development"
   ? "http://localhost:3000"
-  : "";
+  : "https://milo-server.onrender.com";
 
 export const axiosInstance = axios.create({
   baseURL: API_BASE,
